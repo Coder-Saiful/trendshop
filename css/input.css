@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* css variable */
+    :root {
+        /* color veriables */
+        --colorPrimary: #23A0ED;
+        --colorSecondary: #232323;
+        --colorGray: #606060;
+    
+        /* font variables */
+        --fontMont: 'Montserrat', sans-serif;
+        --fontRoboto: 'Roboto', sans-serif;
+      }
+
+      /* typography */
+
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      p {
+        font-family: var(--fontMont);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--fontRoboto);
+      }
+}
+
+@layer components {
+  /* header part css */
+  .icons a {
+    @apply  ml-3;
+  }
+
+  .icon_nav_item {
+    @apply hover:text-[var(--colorPrimary)] duration-300
+  }
+
+  .icon_nav_item.active {
+    @apply text-[var(--colorPrimary)]
+  }
+}
