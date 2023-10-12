@@ -73,12 +73,12 @@
 
         <!-- category and menu -->
 
-        <div class="category_menu flex justify-between">
-            <div class="container">
+        <div class="category_menu bg-[var(--colorSecondary)]">
+            <div class="container flex justify-between ">
                 <!-- categories -->
                 <div class="category">
-                    <button>Categories</button>
-                    <div class="categoryItems">
+                    <button class="text-white text-[18px] font-medium bg-[var(--colorPrimary)] py-2 px-3">Categories</button>
+                    <div class="categoryItems hidden">
                         <ul>
                             <li>Clothes</li>
                             <li>Toys</li>
@@ -92,14 +92,17 @@
                     </div>
                 </div>
                 <!-- main navbar -->
-                <div class="menu">
-                    <ul class="flex">
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>FAQ</li>
-                        <li>Contact</li>
+                <div class="main_menu flex items-center">
+                    <button class="mainMenuToggler block lg:hidden">
+                        <i class="fa-solid fa-bars text-white text-[26px]"></i>
+                    </button>
+                    <ul class="block md:flex justify-end">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>

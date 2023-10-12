@@ -635,12 +635,48 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0.75rem;
 }
 
+/* main navbar part css */
+
+.main_menu ul li a {
+  margin-left: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
 
 .-left-6 {
   left: -1.5rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[45px\] {
+  top: 45px;
+}
+
+.top-\[44px\] {
+  top: 44px;
+}
+
+.top-\[43px\] {
+  top: 43px;
 }
 
 .col-span-12 {
@@ -697,36 +733,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.scale-75 {
-  --tw-scale-x: .75;
-  --tw-scale-y: .75;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-\[80\] {
-  --tw-scale-x: 80;
-  --tw-scale-y: 80;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-\[85\] {
-  --tw-scale-x: 85;
-  --tw-scale-y: 85;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-\[0\.85\] {
-  --tw-scale-x: 0.85;
-  --tw-scale-y: 0.85;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-\[0\.90\] {
-  --tw-scale-x: 0.90;
-  --tw-scale-y: 0.90;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .scale-95 {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -743,6 +749,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -775,9 +789,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--colorPrimary);
 }
 
+.bg-\[var\(--colorSecondary\)\] {
+  background-color: var(--colorSecondary);
+}
+
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 .px-3 {
@@ -808,8 +831,24 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
 .text-\[20px\] {
   font-size: 20px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
 }
 
 .font-\[var\(--fontMong\)\] {
@@ -822,6 +861,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-\[var\(--fontRoboto\)\] {
   font-weight: var(--fontRoboto);
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-\[var\(--colorGray\)\] {
@@ -921,6 +964,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .sm\:text-\[40px\] {
     font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
   }
 }
 

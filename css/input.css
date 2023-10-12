@@ -50,4 +50,10 @@
   .topbar_icons a {
     @apply ml-3;
   }
+
+  /* main navbar part css */
+
+  .main_menu ul li a {
+    @apply text-[white] ml-4
+  }
 }
