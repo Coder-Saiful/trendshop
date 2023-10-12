@@ -38,10 +38,16 @@
   }
 
   .icon_nav_item {
-    @apply hover:text-[var(--colorPrimary)] duration-300
+    @apply hover:text-[var(--colorPrimary)] duration-300;
   }
 
   .icon_nav_item.active {
     @apply text-[var(--colorPrimary)]
+  }
+  .topbar_icons button i, .topbar_icons a i {
+    @apply text-[22px] sm:text-[16px];
+  }
+  .topbar_icons a {
+    @apply ml-3;
   }
 }
