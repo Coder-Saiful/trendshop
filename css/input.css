@@ -45,15 +45,29 @@
     @apply text-[var(--colorPrimary)]
   }
   .topbar_icons button i, .topbar_icons a i {
-    @apply text-[22px] sm:text-[16px];
+    @apply text-[22px] sm:text-[20px];
   }
   .topbar_icons a {
     @apply ml-3;
   }
 
+  .searchBarMobile {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .searchBarMobile.active {
+    @apply  scale-y-100
+  }
+
   /* main navbar part css */
 
   .main_menu ul li a {
-    @apply text-[white] ml-4
+    @apply text-[white] ml-4 hover:text-[var(--colorPrimary)] duration-300
+  }
+  .main_menu ul li a.active {
+    @apply text-[var(--colorPrimary)];
+  }
+  .mobile_menu.active {
+    @apply flex;
   }
 }

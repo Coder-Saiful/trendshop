@@ -6,10 +6,6 @@ module.exports = {
       center: true
     },
     screens: {
-      'xs1': '300px',
-      // => @media (min-width: 300px) { ... }
-      'xs2': '400px',
-      // => @media (min-width: 400px) { ... }
       'sm': '576px',
       // => @media (min-width: 576px) { ... }
 

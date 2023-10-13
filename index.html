@@ -25,13 +25,13 @@
         <!-- Top bar -->
         <div class="top_bar bg-slate-100 lg:block py-1">
             <div class="container flex justify-between items-center">
-                <a class="contact flex space-x-1 sm:space-x-2" href="mailto: trendshop.@gmail.com">
-                    <div class="contact_icon">
+                <a class="header_contact flex space-x-1 sm:space-x-2" href="mailto: trendshop.@gmail.com">
+                    <div class="header_contact_icon">
                         <i class="fa-regular fa-envelope text-[20px] sm:text-[40px]"></i>
                     </div>
-                    <div class="contact_text">
-                        <p class="text-[16px] sm:text-[17px] font-[var(--fontRoboto)] -mb-3" style="font-weight: 600;"><span class="hidden xs2:block">Customer Care</span><span class="block xs2:hidden">CC</span></p>
-                        <span class="text-[16px] font-[var(--fontMont)] text-[var(--colorGray)]  relative -left-6 sm:left-0 mt-[5px] hidden xs2:block sm:mt-0">trendshop.@gmail.com</span>
+                    <div class="header_contact_text">
+                        <p class="text-[16px] sm:text-[17px] font-[var(--fontRoboto)] -mb-3" style="font-weight: 600;"><span class="hidden">Customer Care</span><span class="block">CC</span></p>
+                        <span class="text-[16px] font-[var(--fontMont)] text-[var(--colorGray)]  relative -left-6 sm:left-0 mt-[5px] hidden sm:mt-0">trendshop.@gmail.com</span>
                     </div>
                 </a>
                 <div class="offer_text hidden lg:block">
@@ -54,26 +54,37 @@
             <div class="container items-center grid grid-cols-12 py-2">
                 <!-- logo -->
                 <div class="logo col-span-5 sm:col-span-4 lg:col-span-3">
-                    <a href="index.html"><img src="images/logo.png" alt="Trend Shop Logo" class="transform scale-95 xs2:scale-[0.90] sm:scale-100"></a>
+                    <a href="index.html"><img src="images/logo.png" alt="Trend Shop Logo" class="transform scale-100"></a>
                 </div>
-                <!-- search bar -->
-                <div class="searchBar my-10 col-span-12 lg:col-span-4 border-2 border-[var(--colorPrimary)] hidden lg:inline-flex justify-between rounded-md overflow-hidden">
-                    <input type="text" placeholder="Search products" class="px-4 py-2 w-full focus:outline-none">
-                    <button class="text-white bg-[var(--colorPrimary)] inline-block px-3">Search</button>
+                <!-- search bar for desktop or laptop -->
+
+                <div class="searchBar col-span-12 lg:col-span-5 hidden lg:inline-flex justify-between bg-transparent relative">
+                    <i class="bi bi-search absolute top-[8px] left-[10px] text-[18px] text-[var(--colorSecondary)]"></i>
+                    <input type="text" placeholder="Search products" class="pe-3 ps-8 py-2 w-full focus:outline-none border-t-2 border-b-2 border-l-2 border-[var(--colorPrimary)] rounded-l-md  text-[var(--colorGray)] placeholder:text-[var(--colorGray)]">
+                    <button class="text-white bg-[var(--colorPrimary)] inline-block px-3 rounded-r-md">Search</button>
+                </div>
+                <!-- search bar for mobile, tablet or other small device -->
+                <div class="searchBarMobile col-span-12 lg:col-span-5 absolute top-0 left-0 w-full h-full lg:bg-transparent lg:hidden px-4 transform scale-y-0 duration-300 origin-top z-10">
+                    <div class="search_box flex relative top-[50%] left-[50%] transform -translate-y-[50%] -translate-x-[50%] w-[100%] sm:w-[80%] md:w-[60%]">
+                        <i class="bi bi-search absolute top-[8px] left-[10px] text-[18px] text-[var(--colorSecondary)]"></i>
+                        <input type="text" placeholder="Search products" class="pe-3 ps-8 py-2 w-full focus:outline-none border-t-2 border-b-2 border-l-2 border-[var(--colorPrimary)] rounded-l-md h-[45px] lg:h-auto">
+                        <button class="text-white bg-[var(--colorPrimary)] inline-block px-3 rounded-r-md searchBtn">Search</button>
+                        <button class="searchBoxCloseBtn absolute -top-12 right-0 text-white h-[35px] w-[35px] flex justify-center items-center"><i class="bi bi-x text-[40px] "></i></button>
+                    </div>
                 </div>
                 <!-- icon links -->
-                <div class="topbar_icons col-span-7 sm:col-span-8 lg:col-span-5 text-right">
-                    <button class="search_icon inline-block lg:hidden"><i class="fa-solid fa-magnifying-glass"></i> <span class="hidden sm:inline-block">Search</span></button>
-                    <a href="profile.html" class="icon_nav_item active"><i class="bi bi-person-circle"></i> <span class="hidden sm:inline-block">Account</span></a>
-                    <a href="wishlist.html" class="icon_nav_item"><i class="fa-regular fa-heart"></i> <span class="hidden sm:inline-block">Wishlist</span></a>
+                <div class="topbar_icons col-span-7 sm:col-span-8 lg:col-span-4 text-right">
+                    <button class="searchBoxOpenBtn inline-block lg:hidden"><i class="fa-solid fa-magnifying-glass"></i> <span class="hidden sm:inline-block">Search</span></button>
+                    <a href="cart.html" class="icon_nav_item"><i class="bi bi-person-circle"></i> <span class="hidden sm:inline-block">Account</span></a>
                     <a href="cart.html" class="icon_nav_item"><i class="bi bi-bag"></i> <span class="hidden sm:inline-block">Cart</span></a>
+                    <a href="cart.html" class="icon_nav_item"><i class="fa-regular fa-heart"></i> <span class="hidden sm:inline-block">Wishlist</span></a>
                 </div>
             </div>
         </div>
 
         <!-- category and menu -->
 
-        <div class="category_menu bg-[var(--colorSecondary)]">
+        <div class="category_menu bg-[var(--colorSecondary)] sticky top-0">
             <div class="container flex justify-between ">
                 <!-- categories -->
                 <div class="category">
@@ -91,13 +102,28 @@
                         </ul>
                     </div>
                 </div>
-                <!-- main navbar -->
+                <!-- main navbar for desktop, laptop and other large device -->
                 <div class="main_menu flex items-center">
-                    <button class="mainMenuToggler block lg:hidden">
+                    <button class="mobileMenuToggler block md:hidden">
                         <i class="fa-solid fa-bars text-white text-[26px]"></i>
                     </button>
-                    <ul class="block md:flex justify-end">
-                        <li><a href="index.html">Home</a></li>
+                    <ul class="hidden md:flex justify-end">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- main navbar for mobile, tablet and other small device -->
+                <div class="mobile_menu hidden bg-white fixed top-0 left-0 w-[300px] h-full shadow-xl">
+                    <div class="header grid grid-cols-2 justify-between">
+                        <img src="images/logo.png" alt="Logo">
+                        <button class="closeMenuToggler  text-black h-[35px] w-[35px] flex justify-center items-center"><i class="bi bi-x text-[40px]"></i></button>
+                    </div>
+                    <ul class="hidden md:flex justify-end">
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="shop.html">Shop</a></li>
                         <li><a href="blog.html">Blog</a></li>
@@ -110,7 +136,7 @@
     </header>
 
     <!-- Header part markup end -->
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>
